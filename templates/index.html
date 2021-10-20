@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+
+		<title>Bootstrap Tutorial Sample Page</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../static/main.css">
+
+	</head>
+	
+	<body>
+	
+		<nav class="navbar navbar-expand-md" style="background-color: #4070f4">
+			<a class="navbar-brand" href="#">QuCNN</a>
+			<button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="main-navigation">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="/">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/tech">Technologies</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#about">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#footer">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<header class="page-header header container-fluid">
+			<div class="description">
+				<h1>QuCNN</h1>
+				<p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available</p>
+
+				<br>
+				<h2>Select a file to upload</h2>
+				{% if filename %}
+        <div>
+            <img src="{{ url_for('display_image', filename=filename) }}">
+        </div>
+    		{% endif %}
+    		<br>
+    		<form method="post" action="/" enctype="multipart/form-data">
+    			<input type="file" name="file" autocomplete="off" required style="margin-left: 26%">
+    			<br><br>
+    			<input type="submit" value="Submit" class="btn btn-info">
+    		</form>
+
+			</div>
+		</header>
+		
+		<div class="container mt-5">
+			<div class="row">
+				<div class="col-md-8">
+					<h2 id="about" style="color: #4070f4">About</h2><br>
+					<p>
+						Quantum machine learning is the integration of quantum algorithms within machine learning programs. The most common use of the term refers to machine learning algorithms for the analysis of classical data executed on a quantum computer, i.e. quantum-enhanced machine learning. While machine learning algorithms are used to compute immense quantities of data, quantum machine learning utilizes qubits and quantum operations or specialized quantum systems to improve computational speed and data storage done by algorithms in a program. This includes hybrid methods that involve both classical and quantum processing, where computationally difficult subroutines are outsourced to a quantum device. These routines can be more complex in nature and executed faster on a quantum computer. Furthermore, quantum algorithms can be used to analyze quantum states instead of classical data.Beyond quantum computing, the term "quantum machine learning" is also associated with classical machine learning methods applied to data generated from quantum experiments.
+					</p>
+				</div>
+				<div class="col-md-4">
+					<img src="../static/vector.jpg" height="350px" width="450px" class="rounded"> 
+				</div>
+				
+			</div>
+
+			<div class="row mt-5">
+				<div class="col-md-8">
+					<h2 id="#about" style="color: #4070f4">Technologies</h2><br>
+					<p>
+						<b>QISKIT</b>
+						Qiskit is an open-source software development kit (SDK) for working with quantum computers at the level of circuits, pulses, and algorithms. It provides tools for creating and manipulating quantum programs and running them on prototype quantum devices on IBM Quantum Experience or on simulators on a local computer.<br>
+						<b>FLASK</b>
+						Flask is a micro web framework written in Python. It is classified as a microframework because it does not require particular tools or libraries. It has no database abstraction layer, form validation, or any other components where pre-existing third-party libraries provide common functions.<br>
+					</p>
+					<button class="btn btn-info"><a href="/tech" style="color: white">More</a></button>
+				</div>
+				<div class="col-md-4">
+					<img src="../static/qiskitTech.png" height="350px" width="450px" class="rounded">
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<footer class="page-footer mt-5" id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-md-8 col-sm-12">
+					<h5 class="text-uppercase font-weight-bold">Additional Information</h5>
+					<h6>QuCNN</h6>
+					
+					<p>Minor Project - VI Semester 2021<br>This project is developed by Siddharth Golecha and Pranoy Bhansali.</p>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-12">
+					<h6 class="text-uppercase font-weight-bold">Contact</h6>
+					<p>Siddharth Golecha &nbsp; (+91)-
+					<p>Pranoy Bhansali &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (+91)-8764416175</p>
+					</div>
+			</div>
+			<div class="footer-copyright text-center">© 2021 Copyright: QuCNN</div>
+		</footer>
+		
+		<script src="../static/jquery-3.5.1.min.js"></script>
+		<script src="../static/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../static/main.js"></script>
+		
+	</body>
+	
+</html>

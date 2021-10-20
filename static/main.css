@@ -1,0 +1,146 @@
+/*--- page ---*/
+
+body {
+	padding: 0;
+	margin: 0;
+	background: white; 
+}
+
+/*--- navigation bar ---*/
+
+.navbar {
+	background: #6ab446;
+}
+
+.nav-link,
+.navbar-brand {
+	color: #fff;
+	cursor: pointer;
+}
+
+.nav-link {
+	margin-right: 1em !important;
+}
+
+.nav-link:hover {
+	color: #000;
+}
+
+.navbar-collapse {
+	justify-content: flex-end;
+}
+
+/*--- header ---*/
+
+.header {
+	background-image: url('images/background.png');
+	height: 100vh;
+  width: 100%;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+
+.description {
+	left: 50%;
+	position: absolute;
+	top: 45%;
+	transform: translate(-50%, -55%);
+	text-align: center;
+}
+
+.description h2, h1{
+	color: #4070f4;
+}
+
+.description p {
+	color: black;
+	font-size: 1.3rem;
+	line-height: 1.5;
+}
+
+.description button {
+	border: 1px solid #6ab446;
+	background: #6ab446;
+	border-radius: 0;
+	color: #fff;
+}
+
+.description button:hover {
+	border: 1px solid #fff;
+	background: #fff;
+	color: #000;
+}
+
+/*--- footer ---*/
+
+.page-footer {
+	background-image: url('images/background.png');
+	color: black;
+	padding: 60px 0 30px;
+}
+
+.footer-copyright {
+	color: #666;
+	padding: 40px 0;
+}
+
+/*--- media queries ---*/
+
+@media (max-width: 991.98px) {
+
+	.team {
+		padding: 0 15px;
+	}
+	
+}
+
+@media (max-width: 575.98px) {
+
+	.description {
+		left: 0;
+		padding: 0 15px;
+		position: absolute;
+		top: 10%;
+		transform: none;
+		text-align: center;
+	}
+	
+	.description h1 {
+		font-size: 2em;
+	}
+	
+	.description p {
+		font-size: 1.2rem;
+	}
+	
+	.features {
+		margin: 0;
+	}
+	
+	.team {
+		max-width: 60%;
+	}
+	
+	#demo-modal .btn {
+		min-width: auto;
+	}
+
+}
+
+/* Custom Scroll Bar CSS */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #6e93f7;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4070f4;
+}
