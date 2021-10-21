@@ -17,3 +17,21 @@ How to use -
 The technologies used in this project are Qiskit, Flask, PyTorch, HTML, CSS.
 
 With the help of this project, we're able to create an automated quality assessment for vehicle manufacturing companies while simultaneously demonstrating the capabilities of Quantum Machine Learning models.
+
+## Setup & Installtion
+
+Make sure you have the latest version of Python installed.
+
+```bash
+git clone <repo-url>
+```
+
+## Running The App
+
+```bash
+python app.py
+```
+
+## Viewing The App
+
+Go to `http://127.0.0.1:5000`
